@@ -9,17 +9,17 @@ const Signup = ({ onSignUp }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // fetch("https://emmerce-task-tracker-api-production.up.railway.app/register/", {
-        //   method: "POST",
-        //   headers: {
-        //     "Content-Type": "application/json",
-        //   },
-        //   body: JSON.stringify({ username, email, password }),
-        // }).then((r) => {
-        //   if (r.ok) {
-        //     r.json().then((user) => setUser(user));
-        //   }
-        // });
+         fetch("https://localhost:3000/s", {
+           method: "POST",
+           headers: {
+             "Content-Type": "application/json",
+           },
+           body: JSON.stringify({ username, email, password }),
+         }).then((r) => {
+           if (r.ok) {
+             r.json().then((user) => setUser(user));
+           }
+         });
         setUserName("");
         setEmail("");
         setPassword("");

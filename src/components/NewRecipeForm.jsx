@@ -10,15 +10,15 @@ const NewRecipeForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // fetch("https://emmerce-task-tracker-api-production.up.railway.app/register/", {
+        // fetch("https://localhost:3000/recipes", {
         //   method: "POST",
         //   headers: {
         //     "Content-Type": "application/json",
         //   },
-        //   body: JSON.stringify({ username, email, password }),
+        //   body: JSON.stringify({ recipeCategory, recipeTitle, ingredients, instructions }),
         // }).then((r) => {
         //   if (r.ok) {
-        //     r.json().then((user) => setUser(user));
+        //     r.json().then((res) => console.log(res));
         //   }
         // });
         setRecipeCategory("");
