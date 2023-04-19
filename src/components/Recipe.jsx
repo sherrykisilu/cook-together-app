@@ -6,7 +6,7 @@ const Recipe = () => {
   return (
     <RecipeCard>
       <h1 className="text-white hover:cursor-pointer">
-
+        BBQ Recipes
       </h1>
     </RecipeCard>
   )
