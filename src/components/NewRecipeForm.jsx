@@ -10,17 +10,17 @@ const NewRecipeForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // fetch("https://localhost:3000/recipes", {
-        //   method: "POST",
-        //   headers: {
-        //     "Content-Type": "application/json",
-        //   },
-        //   body: JSON.stringify({ recipeCategory, recipeTitle, ingredients, instructions }),
-        // }).then((r) => {
-        //   if (r.ok) {
-        //     r.json().then((res) => console.log(res));
-        //   }
-        // });
+        fetch("https://localhost:3000/recipes", {
+         method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ recipeCategory, recipeTitle, ingredients, instructions }),
+        }).then((r) => {
+          if (r.ok) {
+            r.json().then((res) => console.log(res));
+          }
+        });
         setRecipeCategory("");
         setRecipeTitle("");
         setIngredients("");
